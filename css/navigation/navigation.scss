@@ -3,11 +3,11 @@
 @import "../utilities/breakpoints";
 
 .header {
-  padding: 2.5rem 2rem;
+  padding: 2rem;
 }
 
 .nav-desktop {
-  @include flex(space-around, center);
+  @include flex(space-evenly, center);
 
   @media (max-width: $large) {
     display: none;
