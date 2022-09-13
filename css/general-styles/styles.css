@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: "kanyon-regular", sans-serif;
+  font-family: "spartan-light", sans-serif;
   font-size: 62.5%;
   color: #333;
   letter-spacing: 1px;
@@ -29,21 +29,30 @@ body {
 }
 
 .heading {
-  font-family: "kanyon-medium", sans-serif;
+  font-family: "spartan-bold", sans-serif;
   font-size: clamp(1.4rem, 12px + 1.5vw, 1.6rem);
 }
 
 .btn {
   display: inline-block;
-  background-color: #3aa48d;
+  font-family: "spartan-bold", sans-serif;
+  font-size: 0.8rem;
   color: #ffffff;
-  font-size: 1rem;
-  padding: 1rem 1.5rem;
-  border: none;
-  background-repeat: 1rem;
+  background-color: #3aa48d;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #3aa48d;
+  border-radius: 0.7rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-.btn::after {
-  content: "/assets/icons/chevron-right.svg";
+.btn:hover {
+  background-color: #ffffff;
+  color: #3aa48d;
+  border: 2px solid #3aa48d;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-chevron::after {
+  content: url("/assets/icons/chevron-right.svg");
   width: 1rem;
 }/*# sourceMappingURL=styles.css.map */
