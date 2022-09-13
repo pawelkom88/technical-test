@@ -1,0 +1,29 @@
+@import "../utilities/mixins";
+@import "../utilities/fonts";
+@import "../utilities/breakpoints";
+
+.header {
+  padding: 2.5rem 2rem;
+}
+
+.nav-desktop {
+  @include flex(space-around, center);
+
+  @media (max-width: $large) {
+    display: none;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    font-family: "spartan-bold", sans-serif;
+    font-size: clamp(0.8rem, calc(10px + 0.3vw), 1.2rem);
+    margin: 0 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
