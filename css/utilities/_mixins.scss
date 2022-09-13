@@ -1,5 +1,9 @@
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin flex($position1, $position2) {
+  display: flex;
+  justify-content: $position1;
+  align-items: $position2;
+}
+
+@mixin transition($property, $duration, $timing) {
+  transition: $property $duration $timing;
 }
