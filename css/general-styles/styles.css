@@ -34,6 +34,7 @@ body {
 }
 
 .btn {
+  position: relative;
   display: inline-block;
   font-family: "spartan-bold", sans-serif;
   font-size: 0.8rem;
@@ -54,5 +55,6 @@ body {
 
 .btn-chevron::after {
   content: url("/assets/icons/chevron-right.svg");
-  width: 1rem;
+  position: absolute;
+  margin-left: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
