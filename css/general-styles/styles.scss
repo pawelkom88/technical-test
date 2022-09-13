@@ -1,0 +1,57 @@
+@import '../utilities/colors';
+
+// skip to content - screen readers
+
+.visible-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visible-hidden:focus {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  width: auto;
+}
+
+// General styles and resusable classes
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "kanyon-regular", sans-serif;
+    font-size: 62.5%; // root font size 10px
+    color: $text-clr;
+    letter-spacing: 1px;
+    line-height: 1.8;
+
+    background-color: $secondary-clr;
+  }
+
+  .heading {
+    font-family: "kanyon-medium", sans-serif;
+    font-size: clamp(1.4rem, 12px + 1.5vw, 1.6rem);
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: $primary-clr;
+    color: $secondary-clr;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    background-repeat: 1rem;
+    cursor: pointer;
+
+    &::after {
+        content: '/assets/icons/chevron-right.svg';
+        width: 1rem;
+    }
+  }
