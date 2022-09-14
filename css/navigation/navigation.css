@@ -24,6 +24,9 @@
     display: none;
   }
 }
+.nav-desktop__logo {
+  max-width: 6%;
+}
 .nav-desktop__links {
   display: flex;
 }
@@ -34,4 +37,11 @@
 }
 .nav-desktop__link:hover {
   text-decoration: underline;
+}
+
+.btn-cta:hover {
+  background-color: #ffffff;
+  color: #3aa48d;
+  border: 2px solid #3aa48d;
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=navigation.css.map */
