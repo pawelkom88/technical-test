@@ -51,21 +51,28 @@ body {
   padding: 0.5rem 0.8rem;
   border: 2px solid $primary-clr;
   border-radius: 0.7rem;
+  @include transition(all, 0.4s, ease-in-out);
   cursor: pointer;
-  @include transition(all, 0.3s, ease-in-out);
-
-  &:hover {
-    background-color: $secondary-clr;
-    color: $primary-clr;
-    border: 2px solid $primary-clr;
-    @include transition(all, 0.3s, ease-in-out);
-  }
 }
 
 .btn-chevron {
+  padding: 0.5rem 2.3rem;
+  @include btn-hover($secondary-clr, $primary-clr, $primary-clr);
+
   &::after {
     content: url("/assets/icons/chevron-right.svg");
     position: absolute;
-    margin-left: 0.5rem;
+    margin: 0.15rem 0.5rem;
+    @include transition(margin, 0.3s, linear);
   }
+
+  &:hover::after {
+    content: url("/assets/icons/chevron-right2.svg");
+    margin-left: 1.2rem;
+    @include transition(margin, 0.3s, linear);
+  }
+}
+
+.padding {
+  padding: 2rem 16vw;
 }

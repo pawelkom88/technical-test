@@ -43,18 +43,31 @@ body {
   padding: 0.5rem 0.8rem;
   border: 2px solid #3aa48d;
   border-radius: 0.7rem;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
-.btn:hover {
+
+.btn-chevron {
+  padding: 0.5rem 2.3rem;
+}
+.btn-chevron:hover {
   background-color: #ffffff;
   color: #3aa48d;
   border: 2px solid #3aa48d;
   transition: all 0.3s ease-in-out;
 }
-
 .btn-chevron::after {
   content: url("/assets/icons/chevron-right.svg");
   position: absolute;
-  margin-left: 0.5rem;
+  margin: 0.15rem 0.5rem;
+  transition: margin 0.3s linear;
+}
+.btn-chevron:hover::after {
+  content: url("/assets/icons/chevron-right2.svg");
+  margin-left: 1.2rem;
+  transition: margin 0.3s linear;
+}
+
+.padding {
+  padding: 2rem 16vw;
 }/*# sourceMappingURL=styles.css.map */

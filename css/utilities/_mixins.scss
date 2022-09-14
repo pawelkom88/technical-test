@@ -7,3 +7,12 @@
 @mixin transition($property, $duration, $timing) {
   transition: $property $duration $timing;
 }
+
+@mixin btn-hover($bg-clr, $clr, $border-clr) {
+  &:hover {
+    background-color: $bg-clr;
+    color: $clr;
+    border: 2px solid $border-clr;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+}
