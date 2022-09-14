@@ -30,7 +30,10 @@ body {
 
 .heading {
   font-family: "spartan-bold", sans-serif;
-  font-size: clamp(1.4rem, 12px + 1.5vw, 1.6rem);
+  font-size: clamp(1.4rem, 12px + 1.5vw, 3rem);
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin-bottom: 2rem;
 }
 
 .btn {
@@ -69,5 +72,5 @@ body {
 }
 
 .padding {
-  padding: 2rem 16vw;
+  padding: 8rem 16vw;
 }/*# sourceMappingURL=styles.css.map */

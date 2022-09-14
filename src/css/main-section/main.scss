@@ -1,0 +1,34 @@
+@import "../utilities/breakpoints";
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 5rem 0;
+
+  @media (max-width: $medium) {
+    max-width: 90%;
+  }
+  @media (min-width: $ultra) {
+    max-width: 60%;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5vw;
+  margin-bottom: 5rem;
+
+  @media (max-width: $large) {
+    grid-template-columns: 1fr;
+    gap: 5vw;
+  }
+}
+
+.paragraph {
+  font-size: clamp(0.6rem, 0.6rem + 0.25vw, 0.95rem);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
