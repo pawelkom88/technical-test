@@ -5,7 +5,8 @@
 .hero {
   width: 100%;
   height: calc(100vh - 116px); // 116 - header height
-  background-image: url("/assets/webp/hero.webp"), url("/assets/png/hero-fallback.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+    url("/assets/webp/hero.webp"), url("/assets/png/hero-fallback.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   background-position: center, center;
@@ -14,16 +15,8 @@
   flex-direction: column;
 
   &-heading {
-    font-size: clamp(1.5rem, calc(10px + 2vw), 2.5rem);
+    font-size: clamp(1.5rem, calc(10px + 2vw), 3.6rem);
     color: $secondary-clr;
     margin-bottom: 1rem;
-  }
-
-  &-btn {
-    padding: 0.7rem 3.5rem;
-
-    &:hover {
-        // @include transition();
-    }
   }
 }
