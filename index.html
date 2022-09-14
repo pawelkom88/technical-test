@@ -10,25 +10,50 @@
     <!-- META TAGS END-->
     <title>Example Careers Page</title>
     <!-- CSS -->
+    <!-- Load critical styles first -->
+    <style>
+      .hero {
+        width: 100%;
+        height: calc(100vh - 116px);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+          url("/assets/webp/hero.webp"), url("/assets/png/hero-fallback.jpg");
+        background-repeat: no-repeat, no-repeat;
+        background-size: cover, cover;
+        background-position: center, center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+
     <link rel="stylesheet" href="/css/reset/reset.css" />
     <link rel="stylesheet" href="/css/general-styles/styles.css" />
     <link rel="stylesheet" href="/css/navigation/navigation.css" />
     <link rel="stylesheet" href="/css/hero/hero.css" />
+
+    <link
+      rel="preload"
+      href="./css/main-section/main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="./css/main-section/main.css" />
+    </noscript>
   </head>
   <body>
     <a href="#main" class="visible-hidden">Jump directly to main content</a>
     <header class="header">
       <nav class="nav-desktop" aria-label="desktop navigation">
-        <a class="logo" href="index.html">
+        <a class="nav-desktop__logo" href="index.html">
           <picture>
             <source media="(max-width:576px)" srcset="./assets/webp/goco-group-logo.webp" />
             <img
-              width="120"
-              height="52"
               class="nav-logo"
               src="/assets/png/goco-group-logo.png"
               srcset="/assets/png/goco-group-logo.png 1x"
-              alt="Goco group logo" />
+              alt="Goco logo" />
           </picture>
         </a>
         <ul class="nav-desktop__links">
@@ -56,8 +81,78 @@
       <a href="#main" class="btn hero-btn btn-chevron">Go for it</a>
     </section>
     <main id="main">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quas repellat tempora nam
-      incidunt libero unde cum ducimus ex amet!
+      <!-- DIFFERENT TAG ?? -->
+      <section class="main">
+        <div class="grid-container">
+          <article>
+            <h2 class="heading">Join us as we save time and money for people everywhere</h2>
+            <p class="paragraph">
+              Since 2006, we've been disrupting the insurance industry to save millions of people
+              masses of money. We're looking for talented, ambitious and friendly faces to help us
+              achieve our mission. We have a wide range of roles across GoCo as we're constantly
+              growing. So, if you've got the skills and passion, we want to hear from you!
+            </p>
+            <a href="#" class="btn btn-chevron">Who we are</a>
+          </article>
+          <picture>
+            <source media="(max-width:576px)" srcset="./assets/webp/ri19no5evzdsbkfyczra.webp" />
+            <img
+              class="grid-img"
+              src="/assets/png/ri19no5evzdsbkfyczra.png"
+              srcset="/assets/png/ri19no5evzdsbkfyczra.png 1x"
+              alt="Goco group logo" />
+          </picture>
+        </div>
+        <div class="grid-container">
+          <picture>
+            <source media="(max-width:576px)" srcset="./assets/webp/sqkkextjs8zcwnopoj6e.webp" />
+            <img
+              class="grid-img"
+              src="/assets/png/sqkkextjs8zcwnopoj6e.jpeg"
+              srcset="/assets/png/sqkkextjs8zcwnopoj6e.jpeg 1x"
+              alt="Group of people cheering" />
+          </picture>
+          <article>
+            <h2 class="heading">Collaborate, innovate and be proud</h2>
+            <p class="paragraph">
+              We want every member of staff to be happy, healthy and successful with us. This is the
+              case whether they're in our office or working from home (which we've all been doing
+              throughout the COVID-19 pandemic). Get ready to be true to yourself, to support your
+              teammates, to think beyond the limits of what's been done before and to give things
+              your best shot. Our staff are at the heart of everything we do, so we'll support you
+              at every step of your GoCo journey.
+            </p>
+            <a href="#" class="btn btn-chevron">&num;Life at GoCo</a>
+          </article>
+        </div>
+        <div class="grid-container">
+          <article>
+            <h2 class="heading">Grow your GoCo career</h2>
+            <p class="paragraph">
+              We don't sit still, so neither should you have to. We strive to help our staff further
+              their careers, find enjoyment in what they do and upskill their abilities. If you're
+              interested in embetterment through things like on-thejob degree programmes, mentorship
+              sessions, career change schemes and personal development plans, you'll love what we
+              have to offer. Follow Emma's journey to finding her place at GoCo.
+            </p>
+            <a href="#" class="btn btn-chevron">Employee journeys</a>
+          </article>
+          <div class="image-container">
+            <h3>Follow Emma's journey to finding her place at GoCo</h3>
+            <a href="#" class="btn btn-chevron">Read</a>
+            <picture>
+              <source media="(max-width:576px)" srcset="./assets/webp/gpmsphxlwmma8ftewbub.webp" />
+              <img
+                class="grid-img"
+                src="/assets/png/gpmsphxlwmma8ftewbub.jpeg"
+                srcset="/assets/png/gpmsphxlwmma8ftewbub.jpeg 1x"
+                alt="Lady with blonde hair smiling" />
+            </picture>
+          </div>
+        </div>
+
+        <!-- <div class="col-1"></div> -->
+      </section>
     </main>
     <footer></footer>
   </body>
