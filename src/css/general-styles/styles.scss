@@ -1,5 +1,6 @@
 @import "../utilities/colors";
 @import "../utilities/mixins";
+@import "../utilities/breakpoints";
 
 // skip to content - screen readers
 
@@ -38,7 +39,7 @@ body {
 
 .heading {
   font-family: "spartan-bold", sans-serif;
-  font-size: clamp(1.4rem, 12px + 1.5vw, 3rem);
+  font-size: clamp(1.4rem, 12px + 1.2vw, 2.5rem);
   letter-spacing: 0;
   line-height: 1.2;
   margin-bottom: 2rem;
@@ -59,6 +60,7 @@ body {
 }
 
 .btn-chevron {
+  font-size: clamp(0.5rem, calc(10px + 0.2vw), 0.8rem);
   padding: 0.5rem 2.3rem;
   @include btn-hover($secondary-clr, $primary-clr, $primary-clr);
 
@@ -73,6 +75,14 @@ body {
     content: url("/assets/icons/chevron-right2.svg");
     margin-left: 1.2rem;
     @include transition(margin, 0.3s, linear);
+  }
+
+  @media (max-width: $large) {
+    padding: 0.3rem 0.5rem;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
