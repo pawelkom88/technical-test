@@ -50,6 +50,14 @@
     <noscript>
       <link rel="stylesheet" href="./css/main-section/main.css" />
     </noscript>
+    <link
+      rel="preload"
+      href="./css/footer/footer.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="./css/footer/footer.css" />
+    </noscript>
   </head>
   <body>
     <a href="#main" class="visible-hidden">Jump directly to main content</a>
@@ -170,7 +178,7 @@
         <h3 class="heading">“Dynamic, industry-leading environment with great benefits.”</h3>
         <p class="paragraph">Former Employee, Content Specialist in Newport, Wales.</p>
         <small>A selected review from Glassdoor, October 2020.</small>
-        <a href="#" class="btn btn-chevron col-3-btn">More Reviews</a>
+        <a href="#" class="btn btn-chevron btn-info">More Reviews</a>
       </div>
 
       <div class="col-4">
@@ -212,16 +220,108 @@
         </div>
       </div>
     </main>
-    <footer>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, harum quia molestiae fuga
-      omnis delectus. Commodi in natus quod impedit omnis fugiat assumenda inventore eaque magni
-      voluptatem, quae architecto facere rerum beatae vitae dolorem ea sunt reprehenderit
-      perferendis quisquam. Blanditiis pariatur nemo aperiam modi suscipit veritatis cum laborum est
-      ullam numquam sunt voluptates odio dolorum ducimus mollitia officia, totam temporibus iure
-      minima? Placeat inventore incidunt, repudiandae vero porro ipsa assumenda est labore eaque
-      laboriosam! Suscipit, quasi. Nihil deserunt, excepturi, exercitationem omnis at fuga officia
-      ipsum nulla mollitia aspernatur natus eveniet sit dicta quaerat, voluptatem sed libero aliquid
-      asperiores cum rerum.
+    <footer class="container footer">
+      <hr class="long" />
+      <nav class="footer-nav" aria-label="footer navigation">
+        <div class="footer-nav-left">
+          <div>
+            <h5 class="footer-nav__heading">Links</h5>
+            <ul>
+              <li class="nav-link">
+                <a href="#">Model Slavery Statement</a>
+              </li>
+              <li class="nav-link">
+                <a href="#">Cookie policy</a>
+              </li>
+              <li class="nav-link">
+                <a href="#">Terms and Condition</a>
+              </li>
+              <li class="nav-link">
+                <a href="#">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-nav-middle">
+          <p class="footer-nav__paragraph">
+            Gocompare.com Limited is registered in England and Wales (Company No. 5799376).
+            Registered office: Imperial House, Imperial Way, Newport, Gwent, NP10 BUH, United
+            Kingdom Modern Slavery Statement
+          </p>
+        </div>
+        <div class="footer-nav-right">
+          <form>
+            <h5 class="footer-nav__heading">Subscribe to our newsletter</h5>
+            <p class="footer-nav__paragraph">Monthly digest of what's new and exciting from us.</p>
+            <div class="form-wrapper">
+              <label for="newsletter" class="visible-hidden">Email address</label>
+              <input
+                class="form-wrapper-input"
+                id="newsletter"
+                type="text"
+                placeholder="Email address" />
+              <button class="btn btn-info" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </nav>
+      <hr class="long" />
+      <p class="footer-nav__paragraph copyright">
+        Copyright (C) 2020 Gocompare.com Limited All Rights Reserved.
+      </p>
+      <hr class="long" />
+      <div class="footer-wrapper">
+        <!-- <span class="footer-copyright"> &copy; <span class="year"></span> POWERED BY PINPOINT</span> -->
+        <span class="footer-copyright"> POWERED BY PINPOINT</span>
+        <ul class="footer-social-media">
+          <li>
+            <a href="#"
+              ><img
+                src="/assets/icons/facebook.svg"
+                alt="facebook icon"
+                class="social-icon"
+                aria-label="Follow us on Facebook"
+                aria-hidden="true"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/assets/icons/linkedin.svg"
+                alt="linkedin icon"
+                class="social-icon"
+                aria-label="Follow us on LinkedIn"
+                aria-hidden="true"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/assets/icons/twitter.svg"
+                alt="twitter icon"
+                class="social-icon"
+                aria-label="Follow us on Twitter"
+                aria-hidden="true"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/assets/icons/youtube.svg"
+                alt="youtube icon"
+                class="social-icon"
+                aria-label="Check our YouTube channel out"
+                aria-hidden="true"
+            /></a>
+          </li>
+        </ul>
+      </div>
     </footer>
+    <script>
+      const footerDate = document.querySelector(".year");
+      const year = new Date().getFullYear();
+
+      footerDate.innerHTML = year;
+    </script>
   </body>
 </html>
