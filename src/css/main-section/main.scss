@@ -7,15 +7,30 @@
   margin: 0 auto;
   padding: 5rem 0;
 
-  @media (max-width: $medium) {
+  @media (max-width: $large) {
     max-width: 90%;
+  }
+
+  @media (min-width: $ultra) {
+    max-width: 60%;
+  }
+}
+
+.row,
+.col-3,
+.col-4 {
+  margin: 4rem 0;
+  padding: 3rem 0;
+
+  @media (max-width: $small) {
+    margin:  0;
+    padding: 2rem 0;
   }
 }
 
 .row {
   display: flex;
-  gap: 5vw;
-  padding: 3rem 0;
+  gap: 3vw;
 
   @media (max-width: $xl) {
     flex-direction: column;
@@ -38,14 +53,8 @@
   align-self: center;
 }
 
-.col-2 img {
-  width: 100%;
-  aspect-ratio: 3/2;
-  object-fit: cover;
-}
-
 .paragraph {
-  font-size: clamp(0.6rem, 0.5rem + 0.25vw, 0.9rem);
+  font-size: clamp(0.6rem, 0.5rem + 0.3vw, 1rem);
   font-weight: bold;
   margin-bottom: 2rem;
 }
@@ -57,17 +66,15 @@
   max-width: 45%;
 }
 
-.heading-main {
-  font-size: clamp(0.8rem, 0.7rem + 1vw, 1.2rem);
+.card-heading {
+  font-size: clamp(0.7rem, 0.7rem + 1vw, 1.1rem);
+  line-height: 1.5;
 }
 
 .col-3 {
   @include flex(center, center);
   flex-direction: column;
-  margin: 2rem 0;
-  padding: 2rem 0;
-  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  // mixins ?
+  text-align: center;
 
   & * {
     margin: 1rem 0;
@@ -83,24 +90,131 @@
   }
 }
 
-// .col-4 {
-//   display: grid;
-//   grid-template-columns: repeat(4, 1fr);
-//   grid-template-rows: repeat(2, 1);
-//   gap: 2rem;
+.col-4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 
-//   &-review {
-//     grid-column: 1/3;
-//     grid-row: span 2;
-//   }
+  & .mobile-only {
+    @media (min-width: $small) {
+      display: none;
+    }
+  }
 
-//   .card:nth-child(1) {
-//     grid-column: 3/4;
-//     grid-row: 1;
-//   }
+  @media (max-width: $xl) {
+    grid-template-columns: 1fr;
+  }
 
-//   .card:nth-child(2) {
-//     grid-column: 3/4;
-//     grid-row: 2;
-//   }
-// }
+  &-review {
+    position: relative;
+    grid-column: 1/3;
+    grid-row: span 2;
+
+    @media (max-width: $xl) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    & .paragraph {
+      font-size: 1.1rem;
+    }
+
+    .card-img-big {
+      @media (max-width: $small) {
+        display: none;
+      }
+    }
+
+    & .wrapper {
+      top: 15%;
+      left: 5%;
+      text-align: center;
+
+      @media (max-width: $small) {
+        display: none;
+      }
+
+      @media (max-width: $medium) {
+        top: 15%;
+      }
+
+      @media (min-width: $xxl) {
+        max-width: 50%;
+        top: 25%;
+      }
+
+      & * {
+        margin: 0.7rem 0;
+      }
+    }
+  }
+
+  &-card {
+    position: relative;
+    @include flex(center, center);
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    @media (max-width: $xl) {
+      min-height: 20vh;
+    }
+
+    &:nth-child(1) {
+      grid-column: 3/4;
+      grid-row: 1;
+
+      @media (max-width: $xl) {
+        grid-column: 1;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: 3/4;
+      grid-row: 2;
+
+      @media (max-width: $xl) {
+        grid-column: 1;
+      }
+    }
+
+    .card-heading {
+      text-align: center;
+    }
+  }
+}
+
+.mobile-card {
+  &-img {
+    margin: 1rem;
+  }
+
+  .paragraph,
+  small {
+    position: absolute;
+    left: 10%;
+    font-size: 0.9rem;
+
+    @media (max-width: $x-small) {
+      font-size: 0.7rem;
+      left: 13%;
+    }
+  }
+
+  .paragraph {
+    top: 36%;
+
+    @media (max-width: $x-small) {
+      top: 25%;
+    }
+  }
+
+  small {
+    top: 30%;
+
+    @media (max-width: $x-small) {
+      top: 30%;
+    }
+  }
+}
