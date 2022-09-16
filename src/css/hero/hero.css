@@ -1,4 +1,17 @@
 .hero-heading {
-  font-size: clamp(1.5rem, 10px + 2.3vw, 3.6rem);
+  font-size: clamp(2rem, 10px + 2.3vw, 3.6rem);
   color: #ffffff;
+}
+@media (max-width: 768px) {
+  .hero-heading {
+    line-height: 1.4;
+    padding: 0 1rem;
+    margin-top: -2rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-btn {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=hero.css.map */
