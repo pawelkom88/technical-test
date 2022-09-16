@@ -7,11 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Example Careers Page" />
     <meta name="description" content="Example Careers Page for technical assessment in Pinpoint" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="https://marketing-assets.pinpointhq.com/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/png/favicon-16x16.webp" />
     <!-- META TAGS END-->
     <title>Example Careers Page</title>
     <!-- CSS -->
@@ -25,11 +21,19 @@
         background-repeat: no-repeat, no-repeat;
         background-size: cover, cover;
         background-position: center, center;
+        text-align: center;
 
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+      }
+
+      @media (max-width: 992px) {
+        .hero {
+          min-height: 100vh;
+          background-position: 16%;
+        }
       }
     </style>
 
@@ -85,114 +89,128 @@
       <h1 class="heading hero-heading">Find your next job with GoCo</h1>
       <a href="#main" class="btn hero-btn btn-chevron">Go for it</a>
     </section>
-    <main id="main">
-      <!-- DIFFERENT TAG ?? -->
-      <section class="container">
-        <div class="row">
-          <div class="col-1">
-            <article>
-              <h2 class="heading">Join us as we save time and money for people everywhere</h2>
-              <p class="paragraph">
-                Since 2006, we've been disrupting the insurance industry to save millions of people
-                masses of money. We're looking for talented, ambitious and friendly faces to help us
-                achieve our mission. We have a wide range of roles across GoCo as we're constantly
-                growing. So, if you've got the skills and passion, we want to hear from you!
-              </p>
-              <a href="#" class="btn btn-chevron">Who we are</a>
-            </article>
-          </div>
-          <figure class="col-2">
-            <img
-              class="col-2-img"
-              src="/assets/png/ri19no5evzdsbkfyczra.png"
-              srcset="/assets/png/ri19no5evzdsbkfyczra.png 1x"
-              alt="Goco group logo" />
-          </figure>
+    <main id="main" class="container">
+      <div class="row">
+        <div class="col-1">
+          <article>
+            <h2 class="heading">Join us as we save time and money for people everywhere</h2>
+            <p class="paragraph">
+              Since 2006, we've been disrupting the insurance industry to save millions of people
+              masses of money. We're looking for talented, ambitious and friendly faces to help us
+              achieve our mission. We have a wide range of roles across GoCo as we're constantly
+              growing. So, if you've got the skills and passion, we want to hear from you!
+            </p>
+            <a href="#" class="btn btn-chevron">Who we are</a>
+          </article>
         </div>
-        <div class="row">
-          <figure class="col-2">
-            <img
-              class="col-2-img"
-              src="/assets/png/sqkkextjs8zcwnopoj6e.jpeg"
-              srcset="/assets/png/sqkkextjs8zcwnopoj6e.jpeg 1x"
-              alt="Group of people cheering" />
-          </figure>
+        <figure class="col-2">
+          <img
+            class="aspect-ratio"
+            src="/assets/png/ri19no5evzdsbkfyczra.png"
+            srcset="/assets/png/ri19no5evzdsbkfyczra.png 1x"
+            alt="Goco group logo" />
+        </figure>
+      </div>
+      <div class="row">
+        <figure class="col-2">
+          <img
+            loading="lazy"
+            class="aspect-ratio"
+            src="/assets/png/sqkkextjs8zcwnopoj6e.jpeg"
+            srcset="/assets/png/sqkkextjs8zcwnopoj6e.jpeg 1x"
+            alt="Group of people cheering" />
+        </figure>
 
-          <div class="col-1">
-            <article>
-              <h2 class="heading">Collaborate, innovate and be proud</h2>
-              <p class="paragraph">
-                We want every member of staff to be happy, healthy and successful with us. This is
-                the case whether they're in our office or working from home (which we've all been
-                doing throughout the COVID-19 pandemic). Get ready to be true to yourself, to
-                support your teammates, to think beyond the limits of what's been done before and to
-                give things your best shot. Our staff are at the heart of everything we do, so we'll
-                support you at every step of your GoCo journey.
-              </p>
-              <a href="#" class="btn btn-chevron">&num;Life at GoCo</a>
-            </article>
-          </div>
+        <div class="col-1">
+          <article>
+            <h2 class="heading">Collaborate, innovate and be proud</h2>
+            <p class="paragraph">
+              We want every member of staff to be happy, healthy and successful with us. This is the
+              case whether they're in our office or working from home (which we've all been doing
+              throughout the COVID-19 pandemic). Get ready to be true to yourself, to support your
+              teammates, to think beyond the limits of what's been done before and to give things
+              your best shot. Our staff are at the heart of everything we do, so we'll support you
+              at every step of your GoCo journey.
+            </p>
+            <a href="#" class="btn btn-chevron">&num;Life at GoCo</a>
+          </article>
         </div>
-        <div class="row">
-          <div class="col-1">
-            <article>
-              <h2 class="heading">Grow your GoCo career</h2>
-              <p class="paragraph">
-                We don't sit still, so neither should you have to. We strive to help our staff
-                further their careers, find enjoyment in what they do and upskill their abilities.
-                If you're interested in embetterment through things like on-thejob degree
-                programmes, mentorship sessions, career change schemes and personal development
-                plans, you'll love what we have to offer. Follow Emma's journey to finding her place
-                at GoCo.
-              </p>
-              <a href="#" class="btn btn-chevron">Employee journeys</a>
-            </article>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <article>
+            <h2 class="heading">Grow your GoCo career</h2>
+            <p class="paragraph">
+              We don't sit still, so neither should you have to. We strive to help our staff further
+              their careers, find enjoyment in what they do and upskill their abilities. If you're
+              interested in embetterment through things like on-thejob degree programmes, mentorship
+              sessions, career change schemes and personal development plans, you'll love what we
+              have to offer. Follow Emma's journey to finding her place at GoCo.
+            </p>
+            <a href="#" class="btn btn-chevron">Employee journeys</a>
+          </article>
+        </div>
 
-          <div class="col-2">
-            <div class="wrapper">
-              <h3 class="heading heading-main">
-                Follow Emma's journey to finding her place at GoCo
-              </h3>
-              <a href="#" class="btn btn-chevron">Read</a>
-            </div>
-            <!-- try picture again -->
-            <img
-              class="col-2-img"
-              src="/assets/png/gpmsphxlwmma8ftewbub.jpeg"
-              alt="Lady with blonde hair smiling" />
+        <div class="col-2">
+          <div class="wrapper">
+            <h3 class="heading card-heading">Follow Emma's journey to finding her place at GoCo</h3>
+            <a href="#" class="btn btn-chevron">Read</a>
           </div>
+          <!-- try picture again -->
+          <img
+            loading="lazy"
+            class="aspect-ratio"
+            src="/assets/png/gpmsphxlwmma8ftewbub.jpeg"
+            alt="Lady with blonde hair smiling" />
         </div>
-      </section>
+      </div>
 
       <div class="col-3 carousel-js">
-        <img class="col-3-img" src="/assets/png/Glassdoor_Logo.jpg" alt="Glassdoor logo" />
-        <h3 class="heading">aasdasda</h3>
-        <p class="paragraph">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, praesentium.
-        </p>
-        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, sunt.</small>
+        <img class="col-3-img" src="/assets/png/glassdoor_logotype.jpg" alt="Glassdoor logo" />
+        <h3 class="heading">“Dynamic, industry-leading environment with great benefits.”</h3>
+        <p class="paragraph">Former Employee, Content Specialist in Newport, Wales.</p>
+        <small>A selected review from Glassdoor, October 2020.</small>
         <a href="#" class="btn btn-chevron col-3-btn">More Reviews</a>
       </div>
 
       <div class="col-4">
         <div class="col-4-review">
-          <h4>Follow Emma's journey to finding her place at GoCo</h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, ex.</p>
-          <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nobis.</small>
-          <img src="/assets/png/zjmlypzlupi1qk4zuykn.jpeg" alt="" />
+          <div class="wrapper">
+            <h4 class="heading card-heading">
+              “We support our people not only through their professional development but also with
+              their work-life balance, health and wellbeing.”
+            </h4>
+            <p class="paragraph">Alex Currie</p>
+            <small>Chief People Officer</small>
+          </div>
+          <img
+            loading="lazy"
+            class="aspect-ratio card-img-big"
+            src="/assets/png/zjmlypzlupi1qk4zuykn.jpeg"
+            alt="Man with beard looking at you" />
         </div>
-        <div class="card">
-          <h4>Lorem ipsum dolor sit amet.</h4>
-          <a class="btn btn-chevron" href="#">xx</a>
+        <div class="col-4-card mobile-only mobile-card">
+          <img
+            loading="lazy"
+            class="mobile-card-img"
+            src="/assets/png/zjmlypzlupi1qk4zuykn.jpeg"
+            alt="Man with beard looking at you" />
+          <h4 class="heading card-heading">
+            “We support our people not only through their professional development but also with
+            their work-life balance, health and wellbeing.”
+          </h4>
+          <small>Chief People Officer</small>
+          <p class="paragraph">Alex Currie</p>
         </div>
-        <div class="card">
-          <h4>Lorem ipsum dolor sit amet.</h4>
-          <a class="btn btn-chevron" href="#">xx</a>
+        <div class="col-4-card">
+          <h4 class="heading card-heading">Find out what’s in it for you.</h4>
+          <a class="btn btn-chevron" href="#">Find out more</a>
+        </div>
+        <div class="col-4-card">
+          <h4 class="heading card-heading">Thinking about applying you for a job?</h4>
+          <a class="btn btn-chevron" href="#">Search Jobs</a>
         </div>
       </div>
-
-      
     </main>
     <footer>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, harum quia molestiae fuga
