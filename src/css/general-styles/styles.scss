@@ -39,10 +39,11 @@ body {
 
 .heading {
   font-family: "spartan-bold", sans-serif;
-  font-size: clamp(1.4rem, 12px + 1.2vw, 2.5rem);
+  font-size: clamp(1.5rem, 12px + 1.2vw, 2.5rem);
   letter-spacing: 0;
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .btn {
@@ -86,6 +87,16 @@ body {
   }
 }
 
-.padding {
-  padding: 8rem 16vw;
+small {
+  font-size: 0.9rem;
+}
+
+.aspect-ratio {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.display-none {
+  display: none;
 }
