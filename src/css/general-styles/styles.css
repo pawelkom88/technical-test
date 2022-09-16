@@ -51,6 +51,16 @@ body {
   cursor: pointer;
 }
 
+.btn-info {
+  background-color: #23ab44;
+}
+.btn-info:hover {
+  background-color: #ffffff;
+  color: #23ab44;
+  border: 2px solid #23ab44;
+  transition: all 0.3s ease-in-out;
+}
+
 .btn-chevron {
   font-size: clamp(0.5rem, 10px + 0.2vw, 0.8rem);
   padding: 0.5rem 2.3rem;
