@@ -55,7 +55,7 @@
 
     &-middle {
       flex-basis: 30%;
-      align-self: flex-start;
+      align-self: center;
 
       @media (max-width: $xxl) {
         flex-basis: 100%;
@@ -79,15 +79,16 @@
 
           &:focus {
             outline: 1px solid $reviews;
-            @include transition(padding, 0.2s, ease-in-out);
+            @include transition(all, 0.2s, ease-in-out);
 
             &::placeholder {
+              opacity: 0.4;
               padding-left: 50%;
             }
           }
 
           &::placeholder {
-            @include transition(padding, 0.2s, ease-in-out);
+            @include transition(all, 0.2s, ease-in-out);
           }
         }
       }
@@ -98,8 +99,7 @@
     }
   }
 
-  & .long,
-  .short {
+  & .long {
     margin-bottom: 1rem;
     opacity: 0.2;
   }
@@ -121,9 +121,4 @@
 .copyright {
   text-align: center;
   margin-bottom: 1rem;
-}
-
-.short {
-  max-width: 50%;
-  margin: 0 auto;
 }
