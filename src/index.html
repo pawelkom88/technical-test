@@ -15,9 +15,9 @@
     <style>
       .hero {
         width: 100%;
-        height: calc(100vh - 116px);
+        min-height: calc(100vh - 107.31px);
         background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-          url("/assets/webp/hero.webp"), url("/assets/png/hero-fallback.jpg");
+          url("/assets/webp/hero-cropped.webp"), url("/assets/png/hero-fallback.jpg");
         background-repeat: no-repeat, no-repeat;
         background-size: cover, cover;
         background-position: center, center;
@@ -31,7 +31,7 @@
 
       @media (max-width: 992px) {
         .hero {
-          min-height: 100vh;
+          min-height: calc(100vh - 64px);
           background-position: 16%;
         }
       }
@@ -58,21 +58,21 @@
     <noscript>
       <link rel="stylesheet" href="./css/footer/footer.css" />
     </noscript>
+    <script type="module" src="./js/app.js"></script>
   </head>
   <body>
     <a href="#main" class="visible-hidden">Jump directly to main content</a>
     <header class="header">
+      <a class="nav-logo" href="index.html">
+        <picture>
+          <source type="image/webp" srcset="/assets/webp/goco-group-logo.webp" />
+          <img
+            src="/assets/png/goco-group-logo.png"
+            srcset="/assets/png/goco-group-logo.png 1x"
+            alt="Goco logo" />
+        </picture>
+      </a>
       <nav class="nav-desktop" aria-label="desktop navigation">
-        <a class="nav-desktop__logo" href="index.html">
-          <picture>
-            <source type="image/webp" srcset="/assets/webp/goco-group-logo.webp" />
-            <img
-              class="nav-logo"
-              src="/assets/png/goco-group-logo.png"
-              srcset="/assets/png/goco-group-logo.png 1x"
-              alt="Goco logo" />
-          </picture>
-        </a>
         <ul class="nav-desktop__links">
           <li class="nav-desktop__link">
             <a href="#">Who we are</a>
@@ -90,9 +90,41 @@
             <a href="#">FAQ</a>
           </li>
         </ul>
-        <a href="#main" class="btn btn-cta">View Jobs</a>
       </nav>
+      <a href="#main" class="btn btn-cta">View Jobs</a>
+      <div
+        role="button"
+        class="hamburger"
+        tabindex="0"
+        aria-expanded="false"
+        aria-label="show navigation menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
     </header>
+    <div class="nav-mobile-container">
+      <nav class="nav-mobile" aria-label="mobile navigation">
+        <ul class="nav-mobile__links">
+          <li class="nav-mobile__link">
+            <a href="#">Who we are</a>
+          </li>
+          <li class="nav-mobile__link">
+            <a href="#">&num;LifeatGoCo</a>
+          </li>
+          <li class="nav-mobile__link">
+            <a href="#">What's in it for you</a>
+          </li>
+          <li class="nav-mobile__link">
+            <a href="#">GoFuther Academy</a>
+          </li>
+          <li class="nav-mobile__link">
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+        <a href="#main" class="btn">View Jobs</a>
+      </nav>
+    </div>
     <section class="hero">
       <h1 class="heading hero-heading">Find your next job with GoCo</h1>
       <a href="#main" class="btn hero-btn btn-chevron">Go for it</a>
@@ -176,9 +208,9 @@
       <div class="col-3 carousel-js">
         <img class="col-3-img" src="/assets/png/glassdoor_logotype.jpg" alt="Glassdoor logo" />
         <h3 class="heading">“Dynamic, industry-leading environment with great benefits.”</h3>
-        <p class="paragraph">Former Employee, Content Specialist in Newport, Wales.</p>
-        <small>A selected review from Glassdoor, October 2020.</small>
-        <a href="#" class="btn btn-chevron btn-info">More Reviews</a>
+        <small>Former Employee, Content Specialist in Newport, Wales.</small>
+        <p class="paragraph">A selected review from Glassdoor, October 2020.</p>
+        <a href="#" class="btn btn-info">More Reviews</a>
       </div>
 
       <div class="col-4">
@@ -207,8 +239,10 @@
             “We support our people not only through their professional development but also with
             their work-life balance, health and wellbeing.”
           </h4>
-          <small>Chief People Officer</small>
-          <p class="paragraph">Alex Currie</p>
+          <div class="mobile-card__wrapper">
+            <small>Chief People Officer</small>
+            <p class="paragraph">Alex Currie</p>
+          </div>
         </div>
         <div class="col-4-card">
           <h4 class="heading card-heading">Find out what’s in it for you.</h4>
@@ -259,20 +293,22 @@
                 class="form-wrapper-input"
                 id="newsletter"
                 type="text"
-                placeholder="Email address" />
-              <button class="btn btn-info" type="button">Subscribe</button>
+                placeholder="Email address"
+                required />
+              <button class="btn btn-info" type="submit">Subscribe</button>
             </div>
           </form>
         </div>
       </nav>
       <hr class="long" />
       <p class="footer-nav__paragraph copyright">
-        Copyright (C) 2020 Gocompare.com Limited All Rights Reserved.
+        &copy; <span class="year"></span> Gocompare.com Limited All Rights Reserved.
       </p>
       <hr class="long" />
       <div class="footer-wrapper">
-        <!-- <span class="footer-copyright"> &copy; <span class="year"></span> POWERED BY PINPOINT</span> -->
-        <span class="footer-copyright"> POWERED BY PINPOINT</span>
+        <span class="footer-copyright">
+          <a href="https://www.pinpointhq.com/">POWERED BY PINPOINT</a></span
+        >
         <ul class="footer-social-media">
           <li>
             <a href="#"
@@ -317,11 +353,5 @@
         </ul>
       </div>
     </footer>
-    <script>
-      const footerDate = document.querySelector(".year");
-      const year = new Date().getFullYear();
-
-      footerDate.innerHTML = year;
-    </script>
   </body>
 </html>
