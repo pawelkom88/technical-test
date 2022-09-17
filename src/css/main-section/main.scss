@@ -53,15 +53,9 @@
   align-self: center;
 }
 
-.paragraph {
-  font-size: clamp(0.6rem, 0.5rem + 0.3vw, 1rem);
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
 .wrapper {
   position: absolute;
-  top: 30%;
+  top: 27%;
   left: 10%;
   max-width: 45%;
 }
@@ -129,10 +123,6 @@
         display: none;
       }
 
-      @media (max-width: $medium) {
-        top: 15%;
-      }
-
       @media (min-width: $xxl) {
         max-width: 50%;
         top: 25%;
@@ -185,29 +175,24 @@
     margin: 1rem;
   }
 
-  .paragraph,
-  small {
+  &__wrapper {
     position: absolute;
+    top: 28%;
     left: 10%;
     font-size: 0.9rem;
 
     @media (max-width: $x-small) {
       font-size: 0.7rem;
-      left: 13%;
     }
   }
 
   .paragraph {
-    top: 36%;
-
     @media (max-width: $x-small) {
       top: 25%;
     }
   }
 
   small {
-    top: 30%;
-
     @media (max-width: $x-small) {
       top: 30%;
     }
