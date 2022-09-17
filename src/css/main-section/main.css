@@ -54,15 +54,9 @@
   align-self: center;
 }
 
-.paragraph {
-  font-size: clamp(0.6rem, 0.5rem + 0.3vw, 1rem);
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
 .wrapper {
   position: absolute;
-  top: 30%;
+  top: 27%;
   left: 10%;
   max-width: 45%;
 }
@@ -130,11 +124,6 @@
     display: none;
   }
 }
-@media (max-width: 768px) {
-  .col-4-review .wrapper {
-    top: 15%;
-  }
-}
 @media (min-width: 1400px) {
   .col-4-review .wrapper {
     max-width: 50%;
@@ -184,29 +173,21 @@
 .mobile-card-img {
   margin: 1rem;
 }
-.mobile-card .paragraph,
-.mobile-card small {
+.mobile-card__wrapper {
   position: absolute;
+  top: 28%;
   left: 10%;
   font-size: 0.9rem;
 }
 @media (max-width: 360px) {
-  .mobile-card .paragraph,
-.mobile-card small {
+  .mobile-card__wrapper {
     font-size: 0.7rem;
-    left: 13%;
   }
-}
-.mobile-card .paragraph {
-  top: 36%;
 }
 @media (max-width: 360px) {
   .mobile-card .paragraph {
     top: 25%;
   }
-}
-.mobile-card small {
-  top: 30%;
 }
 @media (max-width: 360px) {
   .mobile-card small {
