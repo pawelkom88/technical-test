@@ -50,7 +50,7 @@
 }
 .footer-nav-middle {
   flex-basis: 30%;
-  align-self: flex-start;
+  align-self: center;
 }
 @media (max-width: 1400px) {
   .footer-nav-middle {
@@ -73,35 +73,37 @@
 }
 .footer-nav-right .form-wrapper-input:focus {
   outline: 1px solid #23ab44;
-  transition: padding 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .footer-nav-right .form-wrapper-input:focus::-moz-placeholder {
+  opacity: 0.4;
   padding-left: 50%;
 }
 .footer-nav-right .form-wrapper-input:focus:-ms-input-placeholder {
+  opacity: 0.4;
   padding-left: 50%;
 }
 .footer-nav-right .form-wrapper-input:focus::placeholder {
+  opacity: 0.4;
   padding-left: 50%;
 }
 .footer-nav-right .form-wrapper-input::-moz-placeholder {
-  -moz-transition: padding 0.2s ease-in-out;
-  transition: padding 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .footer-nav-right .form-wrapper-input:-ms-input-placeholder {
-  -ms-transition: padding 0.2s ease-in-out;
-  transition: padding 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .footer-nav-right .form-wrapper-input::placeholder {
-  transition: padding 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 @media (max-width: 1400px) {
   .footer-nav-right {
     order: -1;
   }
 }
-.footer .long,
-.footer .short {
+.footer .long {
   margin-bottom: 1rem;
   opacity: 0.2;
 }
@@ -123,9 +125,4 @@
 .copyright {
   text-align: center;
   margin-bottom: 1rem;
-}
-
-.short {
-  max-width: 50%;
-  margin: 0 auto;
 }/*# sourceMappingURL=footer.css.map */
