@@ -37,13 +37,24 @@ body {
   background-color: $secondary-clr;
 }
 
+a:focus {
+  outline: 3px dashed $text-clr;
+  padding: 2px;
+}
+
 .heading {
   font-family: "spartan-bold", sans-serif;
-  font-size: clamp(1.5rem, 12px + 1.2vw, 2.5rem);
+  font-size: clamp(1.5rem, 10px + 1vw, 2.4rem);
   letter-spacing: 0;
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
+}
+
+.paragraph {
+  font-size: clamp(0.85rem, 0.55rem + 0.3vw, 1rem);
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .btn {
@@ -62,6 +73,7 @@ body {
 
 .btn-info {
   background-color: $reviews;
+  border: 2px solid $reviews ;
   @include btn-hover($secondary-clr, $reviews, $reviews);
 }
 
@@ -102,6 +114,11 @@ small {
   object-fit: cover;
 }
 
-.display-none {
-  display: none;
+.menu-js {
+  min-height: 30rem;
+  position: absolute !important;
+  top: 2.5rem;
+  left: 0;
+  right: 0;
+  overflow: visible !important;
 }
