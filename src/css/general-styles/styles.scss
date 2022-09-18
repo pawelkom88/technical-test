@@ -37,7 +37,8 @@ body {
   background-color: $secondary-clr;
 }
 
-a:focus {
+a:focus,
+button:focus {
   outline: 3px dashed $text-clr;
   padding: 2px;
 }
@@ -73,7 +74,7 @@ a:focus {
 
 .btn-info {
   background-color: $reviews;
-  border: 2px solid $reviews ;
+  border: 2px solid $reviews;
   @include btn-hover($secondary-clr, $reviews, $reviews);
 }
 
@@ -121,4 +122,32 @@ small {
   left: 0;
   right: 0;
   overflow: visible !important;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.btn-default {
+  background-color: $grey;
+  border: 2px solid $grey;
+
+  &:hover {
+    @include btn-hover($secondary-clr, $grey, $grey);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 3.2rem;
+  right: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: $large) {
+    top: 1.5rem;
+  }
 }
