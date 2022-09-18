@@ -1,9 +1,8 @@
+const slides = Array.from(document.querySelectorAll(".carousel-item"));
+let currentSlide = 0;
+const numOfSlides = slides.length;
 
 export default function moveToNextSlide() {
-  const slides = Array.from(document.querySelectorAll(".carousel-item"));
-  let currentSlide = 0;
-  const numOfSlides = slides.length;
-  
   if (currentSlide == numOfSlides) {
     currentSlide = 0;
   }
