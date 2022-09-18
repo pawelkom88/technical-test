@@ -28,7 +28,8 @@ body {
   background-color: #ffffff;
 }
 
-a:focus {
+a:focus,
+button:focus {
   outline: 3px dashed #333;
   padding: 2px;
 }
@@ -121,4 +122,35 @@ small {
   left: 0;
   right: 0;
   overflow: visible !important;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.btn-default {
+  background-color: #444;
+  border: 2px solid #444;
+}
+.btn-default:hover:hover {
+  background-color: #ffffff;
+  color: #444;
+  border: 2px solid #444;
+  transition: all 0.3s ease-in-out;
+}
+
+.close {
+  position: absolute;
+  top: 3.2rem;
+  right: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .close {
+    top: 1.5rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
