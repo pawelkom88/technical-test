@@ -1,0 +1,75 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4vw 6vw;
+  margin: 0 auto;
+  background-color: #ffffff;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+.modal .heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .modal .heading {
+    text-align: left;
+    padding-left: 3vw;
+    margin: 2rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .modal {
+    width: 70vw;
+    min-height: 70vh;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal {
+    width: 50vw;
+    min-height: 70vh;
+  }
+}
+
+.overlay {
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.modal-active {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  pointer-events: unset;
+}
+
+.jobs {
+  max-height: 30rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+@media (max-width: 768px) {
+  .jobs {
+    max-height: 85vh;
+  }
+}
+
+.card-icon {
+  margin: 1rem 0;
+}/*# sourceMappingURL=modal.css.map */
