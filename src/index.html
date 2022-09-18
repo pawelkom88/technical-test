@@ -36,12 +36,12 @@
         }
       }
     </style>
-
+    <!-- Load important styles -->
     <link rel="stylesheet" href="/src/css/reset/reset.css" />
     <link rel="stylesheet" href="/src/css/general-styles/styles.css" />
     <link rel="stylesheet" href="/src/css/navigation/navigation.css" />
     <link rel="stylesheet" href="/src/css/hero/hero.css" />
-
+    <!-- Load rest of the styles asynchronously -->
     <link
       rel="preload"
       href="./css/main-section/main.css"
@@ -58,9 +58,28 @@
     <noscript>
       <link rel="stylesheet" href="./css/footer/footer.css" />
     </noscript>
+    <link
+      rel="preload"
+      href="./css/modal/modal.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="./css/modal/modal.css" />
+    </noscript>
+    <link
+      rel="preload"
+      href="./css/cookie/cookie.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="./css/cookie/cookie.css" />
+    </noscript>
+    <!-- JS -->
     <script type="module" src="./js/app.js"></script>
   </head>
+
   <body>
+    <!-- HEADER -->
     <a href="#main" class="visible-hidden">Jump directly to main content</a>
     <header class="header">
       <a class="nav-logo" href="index.html">
@@ -91,7 +110,8 @@
           </li>
         </ul>
       </nav>
-      <a href="#main" class="btn btn-cta">View Jobs</a>
+      <button type="button" class="btn btn-cta btn-js">View Jobs</button>
+      <!-- hamburger menu -->
       <div
         role="button"
         class="hamburger"
@@ -103,6 +123,7 @@
         <span class="line"></span>
       </div>
     </header>
+    <!-- navigation mobile -->
     <div class="nav-mobile-container">
       <nav class="nav-mobile" aria-label="mobile navigation">
         <ul class="nav-mobile__links">
@@ -122,13 +143,15 @@
             <a href="#">FAQ</a>
           </li>
         </ul>
-        <a href="#main" class="btn">View Jobs</a>
+        <button type="button" class="btn btn-js">View Jobs</button>
       </nav>
     </div>
+    <!-- HERO -->
     <section class="hero">
       <h1 class="heading hero-heading">Find your next job with GoCo</h1>
       <a href="#main" class="btn hero-btn btn-chevron">Go for it</a>
     </section>
+    <!-- MAIN CONTENT -->
     <main id="main" class="container">
       <div class="row">
         <div class="col-1">
@@ -176,6 +199,7 @@
           </article>
         </div>
       </div>
+
       <div class="row">
         <div class="col-1">
           <article>
@@ -196,7 +220,6 @@
             <h3 class="heading card-heading">Follow Emma's journey to finding her place at GoCo</h3>
             <a href="#" class="btn btn-chevron">Read</a>
           </div>
-          <!-- try picture again -->
           <img
             loading="lazy"
             class="aspect-ratio"
@@ -205,13 +228,49 @@
         </div>
       </div>
 
-      <div class="col-3 carousel-js">
-        <img class="col-3-img" src="/assets/png/glassdoor_logotype.jpg" alt="Glassdoor logo" />
-        <h3 class="heading">“Dynamic, industry-leading environment with great benefits.”</h3>
-        <small>Former Employee, Content Specialist in Newport, Wales.</small>
-        <p class="paragraph">A selected review from Glassdoor, October 2020.</p>
-        <a href="#" class="btn btn-info">More Reviews</a>
+      <!-- carousel start -->
+      <div class="carousel-container">
+        <div class="col-3 carousel-item carousel-item__visible">
+          <img
+            loading="lazy"
+            class="col-3-img"
+            src="/assets/png/glassdoor_logotype.jpg"
+            alt="Glassdoor logo" />
+          <h3 class="heading">“Dynamic, industry-leading environment with great benefits.”</h3>
+          <small>Former Employee, Content Specialist in Newport, Wales.</small>
+          <p class="paragraph">A selected review from Glassdoor, October 2020.</p>
+          <a href="#" class="btn btn-info">More Reviews</a>
+        </div>
+
+        <div class="col-3 carousel-item">
+          <img
+            loading="lazy"
+            class="col-3-img"
+            src="/assets/webp/carousel1.webp"
+            alt="Glassdoor logo" />
+          <h3 class="heading">Find Your Dream Career</h3>
+          <p class="paragraph">
+            Find the best career for you based on your skills, education, and levels of experience.
+            See what career veterans have to say about their job.
+          </p>
+          <a href="#" class="btn btn-chevron">Register for Free</a>
+        </div>
+
+        <div class="col-3 carousel-item">
+          <img
+            loading="lazy"
+            class="col-3-img"
+            src="/assets/webp/carousel2.webp"
+            alt="Glassdoor logo" />
+          <h3 class="heading">Explore Glassdoor</h3>
+          <p class="paragraph">
+            Millions of people are searching for jobs, salary information, company reviews, and
+            interview questions. See what others are looking for on Glassdoor today.
+          </p>
+          <a href="#" class="btn btn-info">Explore</a>
+        </div>
       </div>
+      <!-- carousel end -->
 
       <div class="col-4">
         <div class="col-4-review">
@@ -229,6 +288,7 @@
             src="/assets/png/zjmlypzlupi1qk4zuykn.jpeg"
             alt="Man with beard looking at you" />
         </div>
+
         <div class="col-4-card mobile-only mobile-card">
           <img
             loading="lazy"
@@ -254,6 +314,7 @@
         </div>
       </div>
     </main>
+    <!-- FOOTER -->
     <footer class="container footer">
       <hr class="long" />
       <nav class="footer-nav" aria-label="footer navigation">
@@ -353,5 +414,63 @@
         </ul>
       </div>
     </footer>
+
+    <!-- modal start -->
+    <div class="overlay"></div>
+    <div class="modal" role="alertdialog" aria-modal="true" aria-labelledby="dialog_label">
+      <button type="button" class="close">close</button>
+      <h4 class="heading" id="dialog_label">Find a job you love</h4>
+      <div class="jobs">
+        <article class="col-4-card">
+          <h5 class="card-heading">Ad 1</h5>
+          <img class="card-icon" src="/assets//icons/job.svg" alt="suitcase icon" />
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ipsum!
+          </p>
+        </article>
+        <article class="col-4-card">
+          <h5 class="card-heading">Ad 2</h5>
+          <img class="card-icon" src="/assets//icons/job.svg" alt="suitcase icon" />
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ipsum!
+          </p>
+        </article>
+        <article class="col-4-card">
+          <h5 class="card-heading">Ad 3</h5>
+          <img class="card-icon" src="/assets//icons/job.svg" alt="suitcase icon" />
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ipsum!
+          </p>
+        </article>
+        <article class="col-4-card">
+          <h5 class="card-heading">Ad 4</h5>
+          <img class="card-icon" src="/assets//icons/job.svg" alt="suitcase icon" />
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ipsum!
+          </p>
+        </article>
+      </div>
+    </div>
+    <!-- modal end-->
+
+    <!-- cookie start -->
+    <div class="cookie-alert">
+      <div class="close btn-focus-first" role="button" tabindex="0" aria-label="close button">
+        <img
+          src="/assets/icons/close.svg"
+          alt="close button"
+          aria-label="close cookie alert"
+          aria-hidden="true" />
+      </div>
+      <div class="cookie-alert__text">
+        <p class="paragraph">
+          This website stores data such as cookies to enable site functionality including analytics
+          and personalization. By using this website, you automatically accept that we use cookies.
+        </p>
+      </div>
+      <button type="button" class="cookie-alert__btn btn-default">Deny</button>
+      <button type="button" class="cookie-alert__btn btn-info btn-focus-last">Accept</button>
+    </div>
+    <!-- cookie end -->
   </body>
 </html>
